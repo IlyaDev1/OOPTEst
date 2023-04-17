@@ -5,31 +5,38 @@ using namespace std;
 class Human;
 class Basket;
 
+
 class Human{
 private:
-    int quan;
+    int used;
+
 public:
-    void take(Basket &object, int value);
+    Human(){
+        this->used = 0;
+    }
+
+    void Take(Basket & apple, int value);
 };
 
 
 class Basket{
+    friend Human;
+
 private:
-    int count;
-    friend void Human::take(Basket &object, int value);
+    int quantity;
 
 public:
     Basket(int value){
-        this->count = value;
+        this->quantity = value;
     }
 
     void print(){
-        cout << this->count << endl;
+        cout << this->quantity << endl;
     }
 };
 
 
-void Human::take(Basket &object, int value){
-    object.count -= value;
-    this->quan += value;
+void Human::Take(Basket & apple, int value){
+    apple.quantity -= value;
+    used += value;
 }
