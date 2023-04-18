@@ -2,11 +2,12 @@
 
 
 int main(){
-    Basket a;
-    Basket b;
-    Basket c;
+    Apple a("100", "red");
+    Apple b("200", "yellow");
+    Apple c("300", "green");
 
-    cout << Basket::apples << endl;
+    c.print();
+    b.print();
 
     return 0;
 }

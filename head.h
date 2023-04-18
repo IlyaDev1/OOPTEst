@@ -2,14 +2,24 @@
 using namespace std;
 
 
-class Basket {
+class Apple{
 public:
-    static int apples;
+    string weight;
+    string color;
+    static int count;
+    int id;
 
-    Basket(){
-        apples++;
+    Apple(string w, string c){
+        this->weight = w;
+        this->color = c;
+        count++;
+        id = count;
+    }
+
+    void print(){
+        cout << this->id << endl;
     }
 };
 
 
-int Basket::apples = 0;
+int Apple::count = 0;
