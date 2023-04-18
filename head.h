@@ -1,35 +1,36 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 
-class Point{
+class Image{
 private:
-    int x;
-    int y;
-    int id;
-    static int count;
+    class Pixel{
+    private:
+        int r; int g; int b;
+    public:
+        Pixel(int r, int g, int b){
+            this->r = r;
+            this->g = g;
+            this->b = b;
+        }
+
+        void getPixel(){
+            cout << this->r << " " << this->g << " " << this->b << endl;
+        }
+    };
+
+    Pixel pix[4]{
+        Pixel(0, 0, 0),
+        Pixel(10, 10, 10),
+        Pixel(20, 20, 20),
+        Pixel(30, 30, 30)
+    };
 
 public:
-    Point(int x, int y){
-        this->x = x;
-        this->y = y;
-        count++;
-        id = count;
-    }
-
-    int getId(){
-        return this->id;
-    }
-
-    static int getCount(){
-        return count;
-    }
-
-    static float gip(Point &object){
-        return sqrt((object.x * object.x + object.y * object.y));
+    void print(){
+        pix[0].getPixel();
+        pix[1].getPixel();
+        pix[2].getPixel();
+        pix[3].getPixel();
     }
 };
-
-
-int Point::count = 0;
