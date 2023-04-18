@@ -2,14 +2,11 @@
 
 
 int main(){
-    Human Ilya;
-    Human Dasha;
-    Basket fst(100);
+    Basket a;
+    Basket b;
+    Basket c;
 
-    Ilya.Take(fst, 10);
-    Dasha.Take(fst, 80);
-
-    fst.print();
+    cout << Basket::apples << endl;
 
     return 0;
 }

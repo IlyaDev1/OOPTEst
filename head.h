@@ -2,41 +2,14 @@
 using namespace std;
 
 
-class Human;
-class Basket;
-
-
-class Human{
-private:
-    int used;
-
+class Basket {
 public:
-    Human(){
-        this->used = 0;
-    }
+    static int apples;
 
-    void Take(Basket & apple, int value);
-};
-
-
-class Basket{
-    friend Human;
-
-private:
-    int quantity;
-
-public:
-    Basket(int value){
-        this->quantity = value;
-    }
-
-    void print(){
-        cout << this->quantity << endl;
+    Basket(){
+        apples++;
     }
 };
 
 
-void Human::Take(Basket & apple, int value){
-    apple.quantity -= value;
-    used += value;
-}
+int Basket::apples = 0;
