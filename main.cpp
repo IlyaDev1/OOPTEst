@@ -2,8 +2,8 @@
 
 
 int main(){
-    Image test[2];
-    test[0].print();
+    Tree mas[3];
+    mas[0].print();
 
     return 0;
 }
