@@ -2,12 +2,14 @@
 
 
 int main(){
-    Apple a("100", "red");
-    Apple b("200", "yellow");
-    Apple c("300", "green");
+    Point a(10, 20);
+    Point b(-1, 2);
+    Point c(3, 4);
 
-    c.print();
-    b.print();
+    cout << b.getId() << endl;
+    cout << Point::getCount() << endl;
+
+    cout << Point::gip(c);
 
     return 0;
 }

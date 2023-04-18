@@ -1,25 +1,35 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 
-class Apple{
-public:
-    string weight;
-    string color;
-    static int count;
+class Point{
+private:
+    int x;
+    int y;
     int id;
+    static int count;
 
-    Apple(string w, string c){
-        this->weight = w;
-        this->color = c;
+public:
+    Point(int x, int y){
+        this->x = x;
+        this->y = y;
         count++;
         id = count;
     }
 
-    void print(){
-        cout << this->id << endl;
+    int getId(){
+        return this->id;
+    }
+
+    static int getCount(){
+        return count;
+    }
+
+    static float gip(Point &object){
+        return sqrt((object.x * object.x + object.y * object.y));
     }
 };
 
 
-int Apple::count = 0;
+int Point::count = 0;
