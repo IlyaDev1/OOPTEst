@@ -2,8 +2,10 @@
 
 
 int main(){
-    Tree mas[3];
-    mas[0].print();
+    Human ilya;
+    ilya.setCapColor("green");
+    ilya.think();
+    ilya.printCapColor();
 
     return 0;
 }
