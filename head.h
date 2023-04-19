@@ -1,46 +1,33 @@
-// композиция - зависимость одного класса от другого
-// агрегация - работа классов вместе но без явной зависимости, когда, например, один класс вложен в другой
 #include <iostream>
 using namespace std;
 
 
-class Cap;
-class Human;
-
-
-class Cap{
-private:
-    friend Human;
-    string color;
-};
-
-
 class Human{
 private:
-    class Brain{
-    public:
-        void think(){
-            cout << "i think" << endl;
-        }
-    };
-
-    Brain brain;
-    Cap cap;
+    string Name;
 
 public:
-    void think(){
-        brain.think();
+    void setName(string name){
+        this->Name = name;
     }
 
-    void setCapColor(string color);
-    void printCapColor();
+    void getName(){
+        cout << "i am " << this->Name << endl;
+    }
 };
 
 
-void Human::setCapColor(string color){
-    cap.color = color;
-}
+class Proger : public Human{
+public:
+    void myFunc(){
+        cout << "i am proger" << endl;
+    }
+};
 
-void Human::printCapColor(){
-    cout << cap.color << endl;
-}
+
+class Jun : public Proger{
+public:
+    void hobby(){
+        cout << "my hobby is breaking production" << endl;
+    }
+};

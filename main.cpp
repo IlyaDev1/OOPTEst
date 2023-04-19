@@ -2,10 +2,11 @@
 
 
 int main(){
-    Human ilya;
-    ilya.setCapColor("green");
-    ilya.think();
-    ilya.printCapColor();
+    Jun ilya;
+    ilya.setName("IlyaKonovalov");
+    ilya.getName();
+    ilya.myFunc();
+    ilya.hobby();
 
     return 0;
 }
