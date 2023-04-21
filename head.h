@@ -2,32 +2,41 @@
 using namespace std;
 
 
-class Point1{
-protected:
-    int x;
-
+class weapon{
 public:
-    Point1(){
-        this->x = 0;
-    }
-
-    Point1(int x){
-        this->x = x;
+    virtual void click(){
+        cout << "click" << endl;
     }
 };
 
 
-class Point2 : public Point1{
-private:
-    int y;
-
+class gun: public weapon{
 public:
-    Point2(int x, int y) : Point1(x){
-        // this->x = x; not need
-        this->y = y;
+    void click() override{
+        cout << "gun" << endl;
     }
+};
 
-    void print(){
-        cout << this->x << " " << this->y << endl;
+
+class sword: public weapon{
+public:
+    void click() override{
+        cout << "sword" << endl;
+    }
+};
+
+
+class shield: public weapon{
+public:
+    void click() override{
+        cout << "shield" << endl;
+    }
+};
+
+
+class player{
+public:
+    void useWeap(weapon & object){
+        object.click();
     }
 };

@@ -2,8 +2,8 @@
 
 
 int main(){
-    Point2 a(-1000, 200);
-    a.print();
-
-    return 0;
+    sword s;
+    gun g;
+    player ilya;
+    ilya.useWeap(g);
 }
