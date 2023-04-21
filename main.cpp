@@ -2,11 +2,8 @@
 
 
 int main(){
-    Jun ilya;
-    ilya.setName("IlyaKonovalov");
-    ilya.getName();
-    ilya.myFunc();
-    ilya.hobby();
+    A a;
+    a.mes3();
 
     return 0;
 }

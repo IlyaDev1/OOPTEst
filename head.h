@@ -2,32 +2,35 @@
 using namespace std;
 
 
-class Human{
+class A{
+public:
+    void mes1() {
+        cout << "hi1" << endl;
+    }
+
 private:
-    string Name;
-
-public:
-    void setName(string name){
-        this->Name = name;
+    void mes2() {
+        cout << "hi1" << endl;
     }
 
-    void getName(){
-        cout << "i am " << this->Name << endl;
+protected:
+    void mes3() {
+        cout << "hi1" << endl;
     }
 };
 
 
-class Proger : public Human{
+class IA : public A{
 public:
-    void myFunc(){
-        cout << "i am proger" << endl;
+    void mes1a(){
+        mes1();
     }
-};
 
+    void mes2a(){
+        mes2();
+    }
 
-class Jun : public Proger{
-public:
-    void hobby(){
-        cout << "my hobby is breaking production" << endl;
+    void mes3a(){
+        mes3();
     }
 };
