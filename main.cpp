@@ -2,8 +2,8 @@
 
 
 int main(){
-    A a;
-    a.mes3();
+    Point2 a(-1000, 200);
+    a.print();
 
     return 0;
 }

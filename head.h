@@ -2,35 +2,32 @@
 using namespace std;
 
 
-class A{
-public:
-    void mes1() {
-        cout << "hi1" << endl;
-    }
-
-private:
-    void mes2() {
-        cout << "hi1" << endl;
-    }
-
+class Point1{
 protected:
-    void mes3() {
-        cout << "hi1" << endl;
+    int x;
+
+public:
+    Point1(){
+        this->x = 0;
+    }
+
+    Point1(int x){
+        this->x = x;
     }
 };
 
 
-class IA : public A{
+class Point2 : public Point1{
+private:
+    int y;
+
 public:
-    void mes1a(){
-        mes1();
+    Point2(int x, int y) : Point1(x){
+        // this->x = x; not need
+        this->y = y;
     }
 
-    void mes2a(){
-        mes2();
-    }
-
-    void mes3a(){
-        mes3();
+    void print(){
+        cout << this->x << " " << this->y << endl;
     }
 };
