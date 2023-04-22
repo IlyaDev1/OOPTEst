@@ -2,23 +2,29 @@
 using namespace std;
 
 
-class weapon{
+class Weapon{
 public:
-    virtual void click(){
+    virtual void click() = 0;
+};
+
+
+class Gun: public Weapon{
+public:
+    void click() override{
         cout << "click" << endl;
     }
 };
 
 
-class gun: public weapon{
+class GunMac: public Gun {
 public:
-    void click() override{
+    void click() override {
         cout << "gun" << endl;
     }
 };
 
 
-class sword: public weapon{
+class sword: public Weapon{
 public:
     void click() override{
         cout << "sword" << endl;
@@ -26,7 +32,7 @@ public:
 };
 
 
-class shield: public weapon{
+class shield: public Weapon{
 public:
     void click() override{
         cout << "shield" << endl;
@@ -34,9 +40,9 @@ public:
 };
 
 
-class player{
+class Player{
 public:
-    void useWeap(weapon & object){
-        object.click();
+    void useWeap(Weapon & weapon){
+        weapon.click();
     }
 };

@@ -3,7 +3,7 @@
 
 int main(){
     sword s;
-    gun g;
-    player ilya;
+    GunMac g;
+    Player ilya;
     ilya.useWeap(g);
 }
